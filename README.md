@@ -8,4 +8,6 @@ pip install pillow
 
 pip install openpyxl
 
-pycharm 환경에서는 PyQt5, Pillow, openpyxl 패키지 설치 후, main.py에서 실행하면 됩니다.
+pycharm 환경에서 진행했습니다.
+
+PyQt5, Pillow, openpyxl 패키지 설치 후, 실행하시면 됩니다.
