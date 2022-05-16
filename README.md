@@ -1,4 +1,4 @@
-# OOADProject
+# OOAD Project
 
 아래 패키지 설치 필요
 
