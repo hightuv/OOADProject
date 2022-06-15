@@ -3,12 +3,13 @@ import openpyxl
 
 class WorkBookManager:
     def __init__(self, year, month):
-        self.workbook = openpyxl.load_workbook('./Format/포멧1.xlsx')
+        self.workbook = openpyxl.load_workbook('Format/포멧1.xlsx')
         self.worksheet = []
         self.worksheet.append(self.workbook.active)
         self.year = year
         self.month = month
-        self.result = ''
+        self.error = 0
+        self.error_message = ''
 
     def get_workbook(self):
         return self.workbook
@@ -18,8 +19,14 @@ class WorkBookManager:
 
     def save_workbook(self):
         # 최종 저장
-        self.workbook.save('./Result/%d년 %d월 식단표.xlsx'%(self.year, self.month))
-        self.result = '%d년 %d월 식단표가 생성되었습니다.'%(self.year, self.month)
+        try:
+            self.workbook.save('./Result/%d년 %d월 식단표.xlsx'%(self.year, self.month))
+        except ValueError:
+            self.error += 1
+            self.error_message = '식단표 저장을 실패했습니다.'
 
-    def get_result(self):
-        return self.result
+    def get_error(self):
+        return self.error
+
+    def get_error_message(self):
+        return self.error_message
