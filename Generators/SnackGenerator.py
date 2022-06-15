@@ -1,6 +1,7 @@
 import random
 
-class Snack:
+
+class SnackGenerator:
     def __init__(self, menu_categories, worksheet):
         self.worksheet = worksheet
         self.snack_tmp1 = 'snack1'

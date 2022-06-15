@@ -1,7 +1,7 @@
 import random
 
 
-class RiceAndPorridge:
+class RPGenerator:
     def __init__(self, menu_categories, worksheet):
         self.worksheet = worksheet
         self.rice_porridge_tmp1 = ['rice1', 'porridge1']

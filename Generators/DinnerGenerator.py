@@ -1,6 +1,7 @@
 import random
 
-class Dinner:
+
+class DinnerGenerator:
     def __init__(self, menu_categories, worksheet):
         self.worksheet = worksheet
         self.creation = 0
